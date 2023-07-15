@@ -15,22 +15,43 @@ class _InputPageState extends State<InputPage> {
         title: Text('BMI Caculator'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'Body text',
-        ),
-      ),
-      floatingActionButton: Theme(
-        data: ThemeData(
-          colorScheme: ColorScheme.dark().copyWith(
-            secondary: Colors.purpleAccent,
-            onSecondary: Colors.white,
+      body: const Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(child: ReusebleCard()),
+                Expanded(child: ReusebleCard()),
+              ],
+            ),
           ),
-        ),
-        child: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
-        ),
+          Expanded(child: ReusebleCard()),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(child: ReusebleCard()),
+                Expanded(child: ReusebleCard()),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ReusebleCard extends StatelessWidget {
+  const ReusebleCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: const Color(0XFF1D1E33),
+        borderRadius: BorderRadius.circular(10),
       ),
     );
   }
