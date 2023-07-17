@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lab_07_bmi_caculator/colors.dart';
 import 'icon_content.dart';
 import 're_use_card.dart';
+import 'package:lab_07_bmi_caculator/constaints.dart';
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -62,13 +63,16 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Expanded(
-            child: Container(
-              margin: EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                // color: Color(0XFF1D1E33),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+            child: ReusebleCard(
+              cardChild: Column(
+                children: [
+                  Text(
+                    'HEIGHT',
+                    style: labelTextStyle,
+                  ),
+                ],
               ),
+              colour: activeCardColor,
             ),
           ),
           Expanded(
