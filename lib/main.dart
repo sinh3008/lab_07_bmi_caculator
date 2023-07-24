@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen/input_screen.dart';
+import 'screen/home/input_screen.dart';
 
 void main() {
   runApp(BMICaculator());

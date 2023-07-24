@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lab_07_bmi_caculator/screen/result/result_screen.dart';
+import 'bottom_button.dart';
 import 'icon_content.dart';
 import 're_use_card.dart';
 import 'package:lab_07_bmi_caculator/constaints.dart';
@@ -222,12 +224,17 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: kBottomContainerColor,
-            margin: EdgeInsets.only(top: 10),
-            width: double.infinity,
-            height: kBottomContainerHeight,
-          )
+          BottomButton(
+            buttonTitle: 'CACULATE',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
