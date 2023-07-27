@@ -6,6 +6,12 @@ import 'package:lab_07_bmi_caculator/screen/home/re_use_card.dart';
 class ResultPage extends StatelessWidget {
   final ThemeData them = ThemeData();
 
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
+
+  ResultPage({required this.bmiResult, required this.resultText, required this.interpretation});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
